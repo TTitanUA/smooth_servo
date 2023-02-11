@@ -31,7 +31,7 @@ class ServoSmoothBase:
 class SmoothLinear(ServoSmoothBase):
     """Simple linear smoother"""
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -48,7 +48,7 @@ class SmoothLinear(ServoSmoothBase):
 class SmoothEaseIn(ServoSmoothBase):
     """ link https://easings.net/#easeInSine """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -63,7 +63,7 @@ class SmoothEaseIn(ServoSmoothBase):
 class SmoothEaseOut(ServoSmoothBase):
     """ link: https://easings.net/#easeOutSine """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -78,7 +78,7 @@ class SmoothEaseOut(ServoSmoothBase):
 class SmoothEaseInOut(ServoSmoothBase):
     """ link: https://easings.net/#easeInOutSine """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -93,7 +93,7 @@ class SmoothEaseInOut(ServoSmoothBase):
 class SmoothEaseInQuad(ServoSmoothBase):
     """ link: https://easings.net/#easeInQuad """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -109,7 +109,7 @@ class SmoothEaseInQuad(ServoSmoothBase):
 class SmoothEaseOutQuad(ServoSmoothBase):
     """ link: https://easings.net/en#easeOutQuad """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -125,7 +125,7 @@ class SmoothEaseOutQuad(ServoSmoothBase):
 class SmoothEaseInOutQuad(ServoSmoothBase):
     """ link: https://easings.net/en#easeInOutQuad """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -141,7 +141,7 @@ class SmoothEaseInOutQuad(ServoSmoothBase):
 class SmoothEaseInCubic(ServoSmoothBase):
     """ link: https://easings.net/#easeInCubic """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -157,7 +157,7 @@ class SmoothEaseInCubic(ServoSmoothBase):
 class SmoothEaseOutCubic(ServoSmoothBase):
     """ link: https://easings.net/en#easeOutCubic """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -173,7 +173,7 @@ class SmoothEaseOutCubic(ServoSmoothBase):
 class SmoothEaseInOutCubic(ServoSmoothBase):
     """ link: https://easings.net/en#easeInOutCubic """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -189,7 +189,7 @@ class SmoothEaseInOutCubic(ServoSmoothBase):
 class SmoothEaseInQuart(ServoSmoothBase):
     """ link: https://easings.net/#easeInQuart """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -205,7 +205,7 @@ class SmoothEaseInQuart(ServoSmoothBase):
 class SmoothEaseOutQuart(ServoSmoothBase):
     """ link: https://easings.net/en#easeOutQuart """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -221,7 +221,7 @@ class SmoothEaseOutQuart(ServoSmoothBase):
 class SmoothEaseInOutQuart(ServoSmoothBase):
     """ link: https://easings.net/en#easeInOutQuart """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -237,7 +237,7 @@ class SmoothEaseInOutQuart(ServoSmoothBase):
 class SmoothEaseInQuint(ServoSmoothBase):
     """ link: https://easings.net/#easeInQuint """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -253,7 +253,7 @@ class SmoothEaseInQuint(ServoSmoothBase):
 class SmoothEaseOutQuint(ServoSmoothBase):
     """ link: https://easings.net/en#easeOutQuint """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -269,7 +269,7 @@ class SmoothEaseOutQuint(ServoSmoothBase):
 class SmoothEaseInOutQuint(ServoSmoothBase):
     """ link: https://easings.net/en#easeInOutQuint """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -285,7 +285,7 @@ class SmoothEaseInOutQuint(ServoSmoothBase):
 class SmoothEaseInExpo(ServoSmoothBase):
     """ link: https://easings.net/#easeInExpo """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -301,7 +301,7 @@ class SmoothEaseInExpo(ServoSmoothBase):
 class SmoothEaseOutExpo(ServoSmoothBase):
     """ link: https://easings.net/en#easeOutExpo """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -317,7 +317,7 @@ class SmoothEaseOutExpo(ServoSmoothBase):
 class SmoothEaseInOutExpo(ServoSmoothBase):
     """ link: https://easings.net/en#easeInOutExpo """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -340,7 +340,7 @@ class SmoothEaseInOutExpo(ServoSmoothBase):
 class SmoothEaseInCirc(ServoSmoothBase):
     """ link: https://easings.net/#easeInCirc """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -356,7 +356,7 @@ class SmoothEaseInCirc(ServoSmoothBase):
 class SmoothEaseOutCirc(ServoSmoothBase):
     """ link: https://easings.net/en#easeOutCirc """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -372,7 +372,7 @@ class SmoothEaseOutCirc(ServoSmoothBase):
 class SmoothEaseInOutCirc(ServoSmoothBase):
     """ link: https://easings.net/en#easeInOutCirc """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -391,7 +391,7 @@ class SmoothEaseInOutCirc(ServoSmoothBase):
 class SmoothEaseInBack(ServoSmoothBase):
     """ link: https://easings.net/#easeInBack """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -409,7 +409,7 @@ class SmoothEaseInBack(ServoSmoothBase):
 class SmoothEaseOutBack(ServoSmoothBase):
     """ link: https://easings.net/en#easeOutBack """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
@@ -427,7 +427,7 @@ class SmoothEaseOutBack(ServoSmoothBase):
 class SmoothEaseInOutBack(ServoSmoothBase):
     """ link: https://easings.net/en#easeInOutBack """
 
-    def generator(self, tick_t_ms: int):
+    def generate(self, tick_t_ms: int):
         _t_ms = self._time_ms
         _s_v = self._start_value
         _v = self._value - _s_v
